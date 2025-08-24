@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Theme.MyApplication" parent="Base.Theme.MyApplication" />
+    <style name="splashScreenApi" parent="Theme.SplashScreen">
+        <item name="android:windowSplashScreenBackground">@color/white</item>
+        <item name="android:windowSplashScreenAnimatedIcon">@drawable/hnd</item>
+        <item name="postSplashScreenTheme">@style/Theme.MyApplication</item>
+
+    </style>
+</resources>
