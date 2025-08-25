@@ -14,6 +14,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MyApplication">
         <activity
+            android:name=".bundleDataActivity"
+            android:exported="false" />
+        <activity
+            android:name=".implicitIntentActivity"
+            android:exported="false" />
+        <activity
             android:name=".gridLayoutActivity"
             android:exported="false" />
         <activity
@@ -33,7 +39,7 @@
             android:exported="false" />
         <activity
             android:name=".editViewImageActivity"
-            android:exported="false"></activity>
+            android:exported="false" />
         <activity
             android:name=".MainActivity"
             android:exported="false" />

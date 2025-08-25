@@ -11,6 +11,7 @@ import cn.pedant.SweetAlert.SweetAlertDialog
 import cn.pedant.SweetAlert.SweetAlertDialog.OnSweetClickListener
 import com.shashank.sony.fancytoastlib.FancyToast
 import android.content.Intent
+import com.example.myapplication.databinding.ActivityEditViewImageBinding
 
 
 class MainActivity : AppCompatActivity() {
@@ -82,6 +83,8 @@ class MainActivity : AppCompatActivity() {
                 .show()
         }
 
+
+        // open web view
         val button = findViewById<Button>(R.id.openWebView)
         button.setOnClickListener {
             val intent = Intent(this, WebViewActivity::class.java)
@@ -89,9 +92,22 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
+        // open grid layout
         val gridLayoutBtn = findViewById<Button>(R.id.gridLayoutBtn)
         gridLayoutBtn.setOnClickListener {
             val intent = Intent(this, gridLayoutActivity::class.java)
+            startActivity(intent)
+        }
+
+        val implicitBtn  = findViewById<Button>(R.id.implicitBtn)
+        implicitBtn.setOnClickListener {
+            val intent = Intent(this, implicitIntentActivity::class.java)
+            startActivity(intent)
+        }
+
+        val bundleBtn  = findViewById<Button>(R.id.bundleBtn)
+        bundleBtn.setOnClickListener {
+            val intent = Intent(this, editViewImageActivity::class.java)
             startActivity(intent)
         }
 
