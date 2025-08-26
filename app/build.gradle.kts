@@ -52,4 +52,6 @@ dependencies {
     implementation("androidx.core:core-splashscreen:1.0.0")
     implementation("io.github.shashank02051997:FancyToast:2.0.2")
     implementation("com.github.f0ris.sweetalert:library:1.6.2")
+    implementation("nl.joery.animatedbottombar:library:1.1.0")
+    implementation("com.github.ybq:Android-SpinKit:1.4.0")
 }

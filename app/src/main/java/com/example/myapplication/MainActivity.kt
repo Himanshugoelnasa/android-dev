@@ -1,7 +1,10 @@
 package com.example.myapplication
 
+import android.content.Intent
 import android.os.Bundle
+import android.view.View
 import android.widget.Button
+import android.widget.ProgressBar
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AlertDialog
@@ -9,9 +12,9 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import cn.pedant.SweetAlert.SweetAlertDialog
 import cn.pedant.SweetAlert.SweetAlertDialog.OnSweetClickListener
+import com.github.ybq.android.spinkit.sprite.Sprite
+import com.github.ybq.android.spinkit.style.DoubleBounce
 import com.shashank.sony.fancytoastlib.FancyToast
-import android.content.Intent
-import com.example.myapplication.databinding.ActivityEditViewImageBinding
 
 
 class MainActivity : AppCompatActivity() {
@@ -23,6 +26,10 @@ class MainActivity : AppCompatActivity() {
         enableEdgeToEdge()
         installSplashScreen()
         setContentView(R.layout.activity_main)
+
+        val progressBar = findViewById<View?>(R.id.spin_kit) as ProgressBar
+        val doubleBounce: Sprite = DoubleBounce()
+        progressBar.setIndeterminateDrawable(doubleBounce)
 
         // code for toast
         val toastButton = findViewById<Button>(R.id.toastButton)
@@ -108,6 +115,12 @@ class MainActivity : AppCompatActivity() {
         val bundleBtn  = findViewById<Button>(R.id.bundleBtn)
         bundleBtn.setOnClickListener {
             val intent = Intent(this, editViewImageActivity::class.java)
+            startActivity(intent)
+        }
+
+        val navigationMenu  = findViewById<Button>(R.id.navigationMenu)
+        navigationMenu.setOnClickListener {
+            val intent = Intent(this, navigationMenuActivity::class.java)
             startActivity(intent)
         }
 
